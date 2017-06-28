@@ -94,6 +94,10 @@ angular.module('invoicing', [])
   service.all = function() {
     return [
       {
+        name: 'British Pound (£)',
+        symbol: '£'
+      },
+      {
         name: 'Canadian Dollar ($)',
         symbol: 'CAD $ '
       },
@@ -160,6 +164,10 @@ angular.module('invoicing', [])
   $scope.editLogo = function() {
     // angular.element('#imgInp').trigger('click');
     document.getElementById('imgInp').click();
+  };
+
+  $scope.printInfo = function() {
+    window.print();
   };
 
   // Remotes an item from the invoice
